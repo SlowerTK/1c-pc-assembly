@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Родитель" id="81">
+			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Категория</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РодительКонтекстноеМеню" id="82"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="83"/>
+		</InputField>
+		<InputField name="ТипКомплектующего" id="9">
+			<DataPath>Объект.ТипКомплектующего</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип комплектующего</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ТипКомплектующегоКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ТипКомплектующегоРасширеннаяПодсказка" id="11"/>
+		</InputField>
+		<InputField name="Производитель" id="13">
+			<DataPath>Объект.Производитель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПроизводительКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПроизводительРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Наименование" id="5">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="7"/>
+		</InputField>
+		<InputField name="Описание" id="96">
+			<DataPath>Объект.Описание</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="97"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="98"/>
+		</InputField>
+		<InputField name="ТекущаяЦена" id="100">
+			<DataPath>Объект.ТекущаяЦена</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ТекущаяЦенаКонтекстноеМеню" id="101"/>
+			<ExtendedTooltip name="ТекущаяЦенаРасширеннаяПодсказка" id="102"/>
+		</InputField>
+		<Table name="Характеристики" id="17">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>1/0:c6b27d8a-a9f7-440b-8e7e-74b6cb76dbfa</DataPath>
+			<ShowCommandBar>auto</ShowCommandBar>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ХарактеристикиКонтекстноеМеню" id="18"/>
+			<AutoCommandBar name="ХарактеристикиКоманднаяПанель" id="19"/>
+			<ExtendedTooltip name="ХарактеристикиРасширеннаяПодсказка" id="20"/>
+			<SearchStringAddition name="ХарактеристикиСтрокаПоиска" id="21">
+				<AdditionSource>
+					<Item>Характеристики</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ХарактеристикиСтрокаПоискаКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="ХарактеристикиСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ХарактеристикиСостояниеПросмотра" id="24">
+				<AdditionSource>
+					<Item>Характеристики</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ХарактеристикиСостояниеПросмотраКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="ХарактеристикиСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ХарактеристикиУправлениеПоиском" id="27">
+				<AdditionSource>
+					<Item>Характеристики</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ХарактеристикиУправлениеПоискомКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="ХарактеристикиУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ХарактеристикиХарактеристика" id="42">
+					<DataPath>1/0:c6b27d8a-a9f7-440b-8e7e-74b6cb76dbfa/0:5c08c94b-3559-4fc1-a70d-e90136d527f1</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ХарактеристикиХарактеристикаКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ХарактеристикиХарактеристикаРасширеннаяПодсказка" id="44"/>
+					<Events>
+						<Event name="StartChoice">ХарактеристикиХарактеристикаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ХарактеристикиЗначение" id="46">
+					<DataPath>1/0:c6b27d8a-a9f7-440b-8e7e-74b6cb76dbfa/0:b4f6cd80-bebd-48e3-97c6-b9f3f419052c</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Свойство</xr:Name>
+							<xr:DataPath xsi:type="xs:string">17:02023637-7868-4a5f-8576-835a76e0c9ba/0:5c08c94b-3559-4fc1-a70d-e90136d527f1</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ХарактеристикиЗначениеКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ХарактеристикиЗначениеРасширеннаяПодсказка" id="48"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Комплектующее</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

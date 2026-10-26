@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="110">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="111"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="106">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Дата" id="5">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="7"/>
+						</InputField>
+						<InputField name="Заказчик" id="9">
+							<DataPath>Объект.Заказчик</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЗаказчикКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ЗаказчикРасширеннаяПодсказка" id="11"/>
+						</InputField>
+						<InputField name="Сборщик" id="13">
+							<DataPath>Объект.Сборщик</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СборщикКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СборщикРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="Количество" id="17">
+							<DataPath>Объект.Количество</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КоличествоКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="КоличествоРасширеннаяПодсказка" id="19"/>
+							<Events>
+								<Event name="OnChange">КоличествоПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Комментарий" id="21">
+							<DataPath>Объект.Комментарий</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="23"/>
+						</InputField>
+						<UsualGroup name="ГруппаЦены" id="200">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Цены</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаЦеныРасширеннаяПодсказка" id="201"/>
+							<ChildItems>
+								<InputField name="СтоимостьРаботы" id="202">
+									<DataPath>Объект.СтоимостьРаботы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СтоимостьРаботыКонтекстноеМеню" id="203"/>
+									<ExtendedTooltip name="СтоимостьРаботыРасширеннаяПодсказка" id="204"/>
+									<Events>
+										<Event name="OnChange">СтоимостьРаботыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Наценка" id="205">
+									<DataPath>Объект.Наценка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="НаценкаКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="НаценкаРасширеннаяПодсказка" id="207"/>
+									<Events>
+										<Event name="OnChange">НаценкаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СтоимостьКомплектующих" id="211">
+									<DataPath>Объект.СтоимостьКомплектующих</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СтоимостьКомплектующихКонтекстноеМеню" id="212"/>
+									<ExtendedTooltip name="СтоимостьКомплектующихРасширеннаяПодсказка" id="213"/>
+								</InputField>
+								<InputField name="РекомендуемаяЦена" id="217">
+									<DataPath>Объект.РекомендуемаяЦена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="РекомендуемаяЦенаКонтекстноеМеню" id="218"/>
+									<ExtendedTooltip name="РекомендуемаяЦенаРасширеннаяПодсказка" id="219"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация1" id="112">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="114"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="108">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="109"/>
+					<ChildItems>
+						<InputField name="Процессор" id="25">
+							<DataPath>Объект.Процессор</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипКомплектующего">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТипКомплектующего.EnumValue.Процессор</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ПроцессорКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ПроцессорРасширеннаяПодсказка" id="27"/>
+							<Events>
+								<Event name="OnChange">ПроцессорПриИзменении</Event>
+								<Event name="StartChoice">ПроцессорНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="МатеринскаяПлата" id="29">
+							<DataPath>Объект.МатеринскаяПлата</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипКомплектующего">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТипКомплектующего.EnumValue.МатеринскаяПлата</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="МатеринскаяПлатаКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="МатеринскаяПлатаРасширеннаяПодсказка" id="31"/>
+							<Events>
+								<Event name="OnChange">МатеринскаяПлатаПриИзменении</Event>
+								<Event name="StartChoice">МатеринскаяПлатаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="БлокПитания" id="33">
+							<DataPath>Объект.БлокПитания</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипКомплектующего">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТипКомплектующего.EnumValue.БлокПитания</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="БлокПитанияКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="БлокПитанияРасширеннаяПодсказка" id="35"/>
+							<Events>
+								<Event name="OnChange">БлокПитанияПриИзменении</Event>
+								<Event name="StartChoice">БлокПитанияНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Корпус" id="37">
+							<DataPath>Объект.Корпус</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипКомплектующего">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТипКомплектующего.EnumValue.Корпус</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="КорпусКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="КорпусРасширеннаяПодсказка" id="39"/>
+							<Events>
+								<Event name="OnChange">КорпусПриИзменении</Event>
+								<Event name="StartChoice">КорпусНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Видеокарта" id="41">
+							<DataPath>Объект.Видеокарта</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипКомплектующего">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТипКомплектующего.EnumValue.Видеокарта</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ВидеокартаКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ВидеокартаРасширеннаяПодсказка" id="43"/>
+							<Events>
+								<Event name="OnChange">ВидеокартаПриИзменении</Event>
+								<Event name="StartChoice">ВидеокартаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ОхлаждениеПроцессора" id="45">
+							<DataPath>Объект.ОхлаждениеПроцессора</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипКомплектующего">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТипКомплектующего.EnumValue.Охлаждение</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ОхлаждениеПроцессораКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ОхлаждениеПроцессораРасширеннаяПодсказка" id="47"/>
+							<Events>
+								<Event name="OnChange">ОхлаждениеПроцессораПриИзменении</Event>
+								<Event name="StartChoice">ОхлаждениеПроцессораНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ОперативнаяПамять" id="49">
+							<DataPath>Объект.ОперативнаяПамять</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипКомплектующего">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТипКомплектующего.EnumValue.ОперативнаяПамять</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ОперативнаяПамятьКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ОперативнаяПамятьРасширеннаяПодсказка" id="51"/>
+							<Events>
+								<Event name="OnChange">ОперативнаяПамятьПриИзменении</Event>
+								<Event name="StartChoice">ОперативнаяПамятьНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаОдиночнойСтроки" id="301">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа одиночной строки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОдиночнойСтрокиРасширеннаяПодсказка" id="302"/>
+							<ChildItems>
+								<InputField name="Накопитель" id="115">
+									<DataPath>Объект.Накопители[0].Накопитель</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Накопитель</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChoiceParameters>
+										<app:item name="Отбор.ТипКомплектующего">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипКомплектующего.EnumValue.Охлаждение</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="НакопительКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="НакопительРасширеннаяПодсказка" id="117"/>
+									<Events>
+										<Event name="OnChange">НакопительПриИзменении</Event>
+										<Event name="StartChoice">НакопительНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<Button name="Кнопка1" id="119">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ДобавитьКоманда</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Добавить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="300"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Накопители" id="53">
+							<Representation>List</Representation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Накопители</DataPath>
+							<ShowCommandBar>auto</ShowCommandBar>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НакопителиКонтекстноеМеню" id="54"/>
+							<AutoCommandBar name="НакопителиКоманднаяПанель" id="55"/>
+							<ExtendedTooltip name="НакопителиРасширеннаяПодсказка" id="56"/>
+							<SearchStringAddition name="НакопителиСтрокаПоиска" id="57">
+								<AdditionSource>
+									<Item>Накопители</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НакопителиСтрокаПоискаКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="НакопителиСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НакопителиСостояниеПросмотра" id="60">
+								<AdditionSource>
+									<Item>Накопители</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НакопителиСостояниеПросмотраКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="НакопителиСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НакопителиУправлениеПоиском" id="63">
+								<AdditionSource>
+									<Item>Накопители</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НакопителиУправлениеПоискомКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="НакопителиУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeRowChange">НакопителиПередНачаломИзменения</Event>
+								<Event name="AfterDeleteRow">НакопителиПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="НакопителиНомерСтроки" id="74">
+									<DataPath>Объект.Накопители.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НакопителиНомерСтрокиКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="НакопителиНомерСтрокиРасширеннаяПодсказка" id="76"/>
+								</LabelField>
+								<InputField name="НакопителиНакопитель" id="78">
+									<DataPath>Объект.Накопители.Накопитель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChoiceParameters>
+										<app:item name="Отбор.ТипКомплектующего">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ТипКомплектующего.EnumValue.Накопитель</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="НакопителиНакопительКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="НакопителиНакопительРасширеннаяПодсказка" id="80"/>
+									<Events>
+										<Event name="OnChange">НакопителиНакопительПриИзменении</Event>
+										<Event name="StartChoice">НакопителиНакопительНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="НакопителиКоличество" id="82">
+									<DataPath>Объект.Накопители.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="НакопителиКоличествоКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="НакопителиКоличествоРасширеннаяПодсказка" id="84"/>
+									<Events>
+										<Event name="OnChange">НакопителиКоличествоПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.СборкаКомпьютеров</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьКоманда" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить команда</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьКоманда</Action>
+		</Command>
+	</Commands>
+</Form>
